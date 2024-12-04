@@ -16,8 +16,6 @@ function preload() {
 
 function setup() {
   createCanvas(400, 400);
-
-  p5grain.setup();
 }
 
 function keyPressed() {
@@ -43,26 +41,12 @@ function draw() {
     myArray = [0];
   }
 
+
   push();
   for (let i = 0; i < 10; i++) {
     drawShape();
     moveCircle();
   }
-  pop();
-
-  push();
-  textSize(25);
-  textAlign(CENTER);
-  textFont("Gotham");
-  let sentence1 = "use ARROW KEYS to move";
-  let sentence2 = "Make it back home!";
-  let sentence3 = 'Click to turn to night / press "k" for day';
-  stroke(0.5);
-  fill("white");
-  text(sentence1, 200, 100);
-  text(sentence2, 200, 130);
-  textSize(15);
-  text(sentence3, 200, 160);
   pop();
 
   push();
@@ -87,6 +71,21 @@ function draw() {
   }
 
   applyMonochromaticGrain(22);
+
+  push();
+  textSize(100);
+  textAlign(CENTER);
+  textFont("Gotham");
+  let sentence1 = "use ARROW KEYS to move";
+  let sentence2 = "Make it back home!";
+  let sentence3 = 'Click to turn to night / press "k" for day';
+  stroke(0.5);
+  fill("white");
+  text(sentence1, 800, 420);
+  text(sentence2, 800, 560);
+  textSize(80);
+  text(sentence3, 800, 700);
+  pop();
 
   if (x > 1350) {
     background(255);
