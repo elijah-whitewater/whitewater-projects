@@ -70,7 +70,7 @@ function draw() {
     print(x);
   }
 
-  applyMonochromaticGrain(22);
+  applyMonochromaticGrain(10);
 
   push();
   textSize(100);
