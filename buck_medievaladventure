@@ -9,13 +9,15 @@ let newx = 0;
 let myArray = [135, 206, 235];
 
 function preload() {
-  knight = loadImage("/assets/knight.gif");
-  grass = loadImage("/assets/grass.png");
-  house = loadImage("/assets/house.png");
+  knight = loadImage("./assets/knight.gif");
+  grass = loadImage("./assets/grass.png");
+  house = loadImage("./assets/house.png");
 }
 
 function setup() {
   createCanvas(400, 400);
+
+  p5grain.setup();
 }
 
 function keyPressed() {
@@ -83,6 +85,8 @@ function draw() {
     }
     print(x);
   }
+
+  applyMonochromaticGrain(22);
 
   if (x > 1350) {
     background(255);
